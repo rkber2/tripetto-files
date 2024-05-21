@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tripetto Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tripetto runner scripts -->
+  <script src="https://unpkg.com/tripetto-runner-foundation"></script>
+  <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    #tripetto {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div id="tripetto"></div>
+  <script>
+    // Form definition
+    const formDefinition = {"sections":[{"id":"ebef07c003034dace7a6e904e9444302dbcdaa92435018f6268e00292048f884","name":"Uniform Violations and Note Tracker","nodes":[{"id":"f03a572dbdada5317e43d9be46a65e80a0fb2e71872c0fa48c5ef2fc3746dfb2","name":"Student Name","nameVisible":true,"slots":[{"id":"ac9f6c67f3eb71d87ea99f065eb9cd745e275a4dcd2871b6ea4dd57c395d3947","type":"number","kind":"meta","reference":"counter","label":"Counter","exportable":false,"protected":true},{"id":"c6a905dc9d48d85875e0510e9da5d0a1f17d41d8567dcb960f10ac0a65cecf1a","type":"boolean","kind":"dynamic","reference":"6cdd0b9ddd3de1dd6bfe581d046ea774d078da7d6ace9abd6a2478a543e04bad","sequence":0,"label":"Option","name":"apple cat","pipeable":{"label":"Option","content":"name","legacy":"Option"},"labelForFalse":"Not selected","labelForTrue":"Selected"},{"id":"1a84a79e15843b9bc5d88c212eeeb193141c89ccb90b9632348f3fee3ceffd3f","type":"boolean","kind":"dynamic","reference":"cffa23784b767f9b5b0697b67e5331e0c2df506a4e190ec7d5e67ac960b0305c","sequence":1,"label":"Option","name":"banana dog","pipeable":{"label":"Option","content":"name","legacy":"Option"},"labelForFalse":"Not selected","labelForTrue":"Selected"}],"block":{"type":"@tripetto/block-multi-select","version":"2.1.1","options":[{"id":"6cdd0b9ddd3de1dd6bfe581d046ea774d078da7d6ace9abd6a2478a543e04bad","name":"apple cat"},{"id":"cffa23784b767f9b5b0697b67e5331e0c2df506a4e190ec7d5e67ac960b0305c","name":"banana dog"}]}},{"id":"0f592eac007419b28bdef779b6f196078c5ff264e2426fa9af2f02cb1db03f00","name":"Staff ID","nameVisible":true,"slots":[{"id":"949c31d2774e00a6e29e116479bb08b0a269d03a74de8f7fa2980e499befda4e","type":"number","kind":"meta","reference":"counter","label":"Counter","exportable":false,"protected":true},{"id":"175512a6fe3300005138abb180bbb59a221425b9d40125263a171dcab414cceb","type":"boolean","kind":"dynamic","reference":"4ba69d7cd18063aeeab570ef945d69ebd8e1352c314598e3f5bf6f69e10aa4f2","sequence":0,"label":"Option","name":"AAA","pipeable":{"label":"Option","content":"name","legacy":"Option"},"labelForFalse":"Not selected","labelForTrue":"Selected"},{"id":"f69fa8a84f04d0add7aff25242f57e16c94b24587cd9b169cee1245779a462f6","type":"boolean","kind":"dynamic","reference":"145f22e0413cdafbbed676d5886248907ca472f4b675266a0221cd04e8217f08","sequence":1,"label":"Option","name":"BBB","pipeable":{"label":"Option","content":"name","legacy":"Option"},"labelForFalse":"Not selected","labelForTrue":"Selected"},{"id":"0847047216d581bf6a38ab212ce97bdecd1a99f47a0c3c9c636dc9688958b344","type":"boolean","kind":"dynamic","reference":"810f72c0718e46b55cb97a1941565938ca3027e2352b011666dde32a9c2582c0","sequence":2,"label":"Option","name":"CCC","pipeable":{"label":"Option","content":"name","legacy":"Option"},"labelForFalse":"Not selected","labelForTrue":"Selected"}],"block":{"type":"@tripetto/block-multi-select","version":"2.1.1","options":[{"id":"4ba69d7cd18063aeeab570ef945d69ebd8e1352c314598e3f5bf6f69e10aa4f2","name":"AAA"},{"id":"145f22e0413cdafbbed676d5886248907ca472f4b675266a0221cd04e8217f08","name":"BBB"},{"id":"810f72c0718e46b55cb97a1941565938ca3027e2352b011666dde32a9c2582c0","name":"CCC"}]}},{"id":"cee09bc024b13098eba388a33d16eddf068775f9793b6055921bbf2962421a5c","name":"Are you recording a Uniform Violation or a Parent Note/Email","nameVisible":true,"slots":[{"id":"1f65945642b188d974698af81d64d6622758dd98b9b60f20091a4d9c6f24929f","type":"string","kind":"static","reference":"choice","label":"Choice"}],"block":{"type":"@tripetto/block-multiple-choice","version":"7.0.1","choices":[{"id":"354efe391c75eddedf0ef269aeed372c2676420a661d1f34c71b6e0170277b5d","name":"Uniform Violation"},{"id":"0f8fa6896aff8e49e59fc21595dc70f6f017893ef8868c10e1e6f512c732e76b","name":"Parent Note/Email"}]}}],"branches":[{"id":"3ccf0a79a783b86139adaff6626cd2fb206bedd7cc104256d937f4f3a04fabb0","name":"Uniform Violation","sections":[{"id":"6e7ef89c4f3cba7913ea124ca2108e857b970c0084179d4cc5fa7424b444d73b","nodes":[{"id":"0891258e225a0199ba5273ff3390647fa005440186378234e1693810c09f3a84","name":"Violation Date","nameVisible":true,"slots":[{"id":"229d2c37ff305200c8c25370e645b5d3cc39176f4241f6ab0da5d761471f79fa","type":"date","kind":"static","reference":"date","label":"Date"}],"block":{"type":"@tripetto/block-date","version":"5.0.1"}},{"id":"ab3cfb5d54da38b25f71be4c571d96f19a7a202f51a3e4c946cde749c38ff04d","name":"Violation Description","nameVisible":true,"slots":[{"id":"6d87252284d29ec6f90829c4b5f51968f99d69c0028ab3f9d1a2028f087681cb","type":"text","kind":"static","reference":"text","label":"Text"}],"block":{"type":"@tripetto/block-text","version":"5.0.1"}}]}],"conditions":[{"id":"496389c96e58b409ae289c1cc60da0b709c898c4c25193b45b4a9b9b03eea8e6","nodeId":"cee09bc024b13098eba388a33d16eddf068775f9793b6055921bbf2962421a5c","slotId":"1f65945642b188d974698af81d64d6622758dd98b9b60f20091a4d9c6f24929f","choiceId":"354efe391c75eddedf0ef269aeed372c2676420a661d1f34c71b6e0170277b5d"}]},{"id":"bb36792a61de00449a0da73ba4ba8a016e48b6d7682f8e9fd505f3d2a7387929","name":"Parent Note/Email","sections":[{"id":"ecfbb7f949fba4069952b8b42e2a8a8cfa7061c735b2c71d015021f90052daca","nodes":[{"id":"759d23ec6700daef9a94969e88d979c8a4b02d0d38c06482001708d9cd0132d5","name":"Communication Date","nameVisible":true,"slots":[{"id":"cd5420f58565f58cb02c53b512e960647f5079e7d7855f72d155f5e61aefba38","type":"date","kind":"static","reference":"date","label":"Date"}],"block":{"type":"@tripetto/block-date","version":"5.0.1"}},{"id":"798928ef3d7ad0a3ef3f3d5cbe2f60983b4d9f2ce9dfdf198a76459e1f225b00","name":"Parent Note/Email","nameVisible":true,"slots":[{"id":"02c6f9cfcc84de7fd1bead3074ea2bca79a5986304ebfc1679b29c3de1c14d60","type":"text","kind":"static","reference":"text","label":"Text"}],"block":{"type":"@tripetto/block-text","version":"5.0.1"}}]}],"conditions":[{"id":"7df949b0ea524a535be144238dc1e3f9292e69a98f2b3b404f464ea59914fca9","nodeId":"cee09bc024b13098eba388a33d16eddf068775f9793b6055921bbf2962421a5c","slotId":"1f65945642b188d974698af81d64d6622758dd98b9b60f20091a4d9c6f24929f","choiceId":"0f8fa6896aff8e49e59fc21595dc70f6f017893ef8868c10e1e6f512c732e76b"}]}]}]};
+
+    // Tripetto runner
+    const runner = TripettoRunner.run({
+      element: document.getElementById("tripetto"),
+      definition: formDefinition,
+      styles: {
+        fontFamily: "Arial, sans-serif"
+      }
+    });
+  </script>
+</body>
+</html>
